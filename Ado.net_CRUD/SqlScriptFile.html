@@ -1,0 +1,74 @@
+
+
+--CREATE DATABASE Ado_CRUD 
+--USE Ado_CRUD
+
+--CREATE TABLE Employee(
+--ID INT PRIMARY KEY IDENTITY(1,1),
+--Name NVARCHAR(50),
+--Gender NVARCHAR(20),
+--Department NVARCHAR(100),
+--City NVARCHAR(100)
+--)
+
+--Store procedure
+
+-- GET
+
+--CREATE PROCEDURE spGetAllEmployees
+--AS
+--BEGIN
+--SELECT * FROM Employee;
+--END;
+
+--EXEC spGetAllEmployees
+
+-- Insert
+
+--CREATE PROCEDURE spAddEmployee(
+--@Name NVARCHAR(50),
+--@Gender NVARCHAR(20),
+--@Department NVARCHAR(100),
+--@City NVARCHAR(100))
+--AS
+--BEGIN
+-- INSERT INTO Employee(Name,Gender,Department,City) VALUES(@Name,@Gender,@Department,@City);
+--END;
+
+--
+-- Update
+
+--ALTER PROCEDURE spUpdateEmployee(
+--@ID INT,
+--@Name NVARCHAR(50),
+--@Gender NVARCHAR(20),
+--@Department NVARCHAR(100),
+--@City NVARCHAR(100))
+--AS
+--BEGIN
+--IF EXISTS (SELECT * FROM Employee Where ID = @ID)
+--BEGIN
+--UPDATE Employee
+--SET Name = @Name,
+--Gender = @Gender,
+--Department = @Department,
+--City = @City
+--Where ID = @ID
+--END;
+--ELSE
+--BEGIN
+--RETURN 'Employee not Exist'
+--END
+--END;
+--EXEC spUpdateEmployee 1 ,'MNA_AKRAM','','',
+
+
+--DELETE
+
+--CREATE PROCEDURE spDeleteEmployee(
+--@EmpId INT
+--)
+--AS
+--BEGIN
+--DELETE FROM Employee WHERE ID = @EmpId
+--END
